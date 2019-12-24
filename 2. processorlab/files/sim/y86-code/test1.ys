@@ -1,0 +1,4 @@
+irmovq $1,%rax
+irmovl $2,%rcx
+irmovw $3,%rdx
+irmovb $4,%rbx

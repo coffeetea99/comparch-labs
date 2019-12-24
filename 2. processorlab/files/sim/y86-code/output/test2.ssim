@@ -1,0 +1,23 @@
+Y86-64 Processor: seq-full.hcl
+61 bytes of code read
+IF: Fetched irmovq at 0x0.  ra=----, rb=%rsp, valC = 0x50
+IF: Fetched irmovq at 0xa.  ra=----, rb=%rax, valC = 0x123
+IF: Fetched irmovl at 0x14.  ra=----, rb=%rcx, valC = 0x11223344
+IF: Fetched irmovw at 0x1a.  ra=----, rb=%rdx, valC = 0xffffffffffffffde
+IF: Fetched irmovb at 0x1e.  ra=----, rb=%rbx, valC = 0xffffffffffffffff
+IF: Fetched callo at 0x21.  ra=----, rb=----, valC = 0xb
+Wrote 0x26 to address 0x48
+IF: Fetched irmovq at 0x31.  ra=----, rb=%rax, valC = 0xfffffffffffffffb
+IF: Fetched ret at 0x3b.  ra=----, rb=----, valC = 0x0
+IF: Fetched halt at 0x26.  ra=----, rb=----, valC = 0x0
+9 instructions executed
+Status = HLT
+Condition Codes: Z=1 S=0 O=0
+Changed Register State:
+%rax:	0x0000000000000000	0xfffffffffffffffb
+%rcx:	0x0000000000000000	0x0000000011223344
+%rdx:	0x0000000000000000	0xffffffffffffffde
+%rbx:	0x0000000000000000	0xffffffffffffffff
+%rsp:	0x0000000000000000	0x0000000000000050
+Changed Memory State:
+0x0048:	0x0000000000000000	0x0000000000000026

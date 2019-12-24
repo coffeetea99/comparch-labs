@@ -1,0 +1,16 @@
+Y86-64 Processor: seq-std.hcl
+23 bytes of code read
+IF: Fetched irmovq at 0x0.  ra=----, rb=%rax, valC = 0x1
+IF: Fetched irmovl at 0xa.  ra=----, rb=%rcx, valC = 0x2
+IF: Fetched irmovw at 0x10.  ra=----, rb=%rdx, valC = 0x3
+IF: Fetched irmovb at 0x14.  ra=----, rb=%rbx, valC = 0x4
+IF: Fetched halt at 0x17.  ra=----, rb=----, valC = 0x0
+5 instructions executed
+Status = HLT
+Condition Codes: Z=1 S=0 O=0
+Changed Register State:
+%rax:	0x0000000000000000	0x0000000000000001
+%rcx:	0x0000000000000000	0x0000000000000002
+%rdx:	0x0000000000000000	0x0000000000000003
+%rbx:	0x0000000000000000	0x0000000000000004
+Changed Memory State:

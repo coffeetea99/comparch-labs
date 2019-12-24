@@ -1,0 +1,17 @@
+	irmovq stack,%rsp
+	irmovq $0x123,%rax
+	irmovl $0x11223344,%rcx
+	irmovw $0xffde,%rdx
+	irmovb $0xff,%rbx
+
+	callo test
+	halt
+	irmovq $6,%rsi
+
+test:
+	irmovq $-5,%rax
+	ret
+	nop
+
+.pos 0x50:
+stack:

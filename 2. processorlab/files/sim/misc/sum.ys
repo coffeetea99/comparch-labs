@@ -1,0 +1,36 @@
+# initial code
+        irmovq Stack, %rsp
+        irmovq ele1, %rdi
+        call sum_list
+        halt
+
+# Sample linked list
+.align 8
+ele1:
+        .quad 0x00a
+        .quad ele2
+ele2:
+        .quad 0x0b0
+        .quad ele3
+ele3:
+        .quad 0xc00
+        .quad 0
+
+# long sum_list (list_ptr ls)
+# ls in %rdi
+sum_list:
+        xorq %rax, %rax
+        andq %rdi, %rdi
+        je done
+loop:
+        mrmovq (%rdi), %r10
+        mrmovq 8(%rdi), %rdi
+        addq %r10, %rax
+        andq %rdi, %rdi
+        jne loop
+done:
+        ret
+
+.pos 0x100
+Stack:
+
