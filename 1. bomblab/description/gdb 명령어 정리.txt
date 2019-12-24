@@ -1,0 +1,27 @@
+objdump -d bomb > disassembly
+즉, disassembly 에 disassemble 된 어셈블리 코드 들어가 있음
+vim disassembly
+
+gdb bomb  //bomb
+break explode_bomb
+break phase_1 등을 건다
+break phase_2
+layout reg
+run
+테스트할 문자열 입력2
+
+si : 한 명령어 넘어감
+ni : 한 줄 다 넘어감
+c : breakpoint에 걸리기 전까지 다 넘어감
+
+터미널 복사 : ctrl + insert
+터미널 붙여넣기 : shift + insert
+
+나머지 명령어는
+http://heather.cs.ucdavis.edu/~matloff/UnixAndC/CLanguage/Debug.html
+
+스코어보드는 
+https://csap.snu.ac.kr/comparch/bomblab/scoreboard
+
+print *(int *) ($rsp+8)
+
